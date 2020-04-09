@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+}
+#nav-head{
+    /* display: block; */
+    padding-top: 20px;
+    background: -webkit-linear-gradient(to left, #2F80ED, #56CCF2) !important;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2F80ED, #56CCF2)!important;
+    color: white;
+    font-size: 17px;
+    position: fixed;
+    width: 100%;
+    /* opacity: 0.8; */
+}
+.nav-default{
+    display: inline-block;
+    width: 15%;
+    text-align: center;
+}
+.head{
+    display: inline;
+    text-align: center;
+    font-weight: bold;
+}
+.head img{
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    cursor: pointer;
+}                 
+a{
+    display: block;
+    cursor: pointer;
+}
+.img-rotate-front{
+    animation: rotate-front 0.3s;
+    -webkit-animation: rotate-front 0.3s;
+    animation-fill-mode: forwards;
+}
+.img-rotate-back{
+    animation: rotate-back 0.3s;
+    -webkit-animation: rotate-back 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes rotate-back{
+    0%{transform: rotate(180deg);}
+    100%{}
+}
+@-webkit-keyframes rotate-front /* Safari 和 Chrome */
+{
+    0%{-webkit-transform: rotate(180deg);}
+    100%{}
+}
+@keyframes rotate-front{
+    0%{}
+    100%{transform: rotate(180deg);}
+}
+@-webkit-keyframes rotate-front /* Safari 和 Chrome */
+{
+    0%{}
+    100%{-webkit-transform: rotate(180deg);}
+}
+.content{
+    position: absolute;
+    text-align: center;
+    margin-top: -10px;
+    width: 15%;
+    background-color: white;
+    color: grey;
+}
+.content a:first-child{
+    padding-top: 10px;
+}
+.content a{
+    padding-bottom: 10px;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    border-left:4px solid lemonchiffon;
+}
+.content a:hover,a:active{
+    background-color: lightcyan;
+    font-weight: bold;
+    border-left: 4px solid skyblue;
+    transition: 0.2s;
+}
