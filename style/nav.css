@@ -1,9 +1,11 @@
 body{
     margin: 0;
 }
-#nav-head{
-    /* display: block; */
-    padding-top: 20px;
+
+#nav {
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    height: 80px;
     background: -webkit-linear-gradient(to left, #2F80ED, #56CCF2) !important;  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #2F80ED, #56CCF2)!important;
     color: white;
@@ -12,26 +14,35 @@ body{
     width: 100%;
     /* opacity: 0.8; */
 }
+
+#nav-head {
+    display: grid;
+    grid-template-columns: repeat(6, 4fr) 1fr;
+}
+
 .nav-default{
-    display: inline-block;
-    width: 15%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 10px 0 10px;
     text-align: center;
+    align-items: center;
 }
 .head{
     display: inline;
     text-align: center;
     font-weight: bold;
 }
-.head img{
+.head img {
     margin: 0;
     padding: 0;
     width: 30px;
     cursor: pointer;
 }                 
-a{
+a {
     display: block;
     cursor: pointer;
 }
+
 .img-rotate-front{
     animation: rotate-front 0.3s;
     -webkit-animation: rotate-front 0.3s;
@@ -60,26 +71,29 @@ a{
     0%{}
     100%{-webkit-transform: rotate(180deg);}
 }
+
 .content{
     position: absolute;
-    text-align: center;
-    margin-top: -10px;
-    width: 15%;
+    margin-top: 45px;
+    width: 16%;
     background-color: white;
     color: grey;
+    border-radius: 10px;
+    overflow: hidden;
 }
-.content a:first-child{
-    padding-top: 10px;
-}
-.content a{
-    padding-bottom: 10px;
+
+.content a {
+    height: 42px;
+    line-height: 42px;  /* 垂直居中文字 */
+    text-align: center; /* 水平居中文字 */
     text-overflow: ellipsis;
     overflow:hidden;
-    border-left:4px solid lemonchiffon;
+    font-weight: normal;
+    border-left:5px solid lemonchiffon;
+    transition: all 0.2s linear;
 }
-.content a:hover,a:active{
+.content a:hover, a:active{
     background-color: lightcyan;
     font-weight: bold;
-    border-left: 4px solid skyblue;
-    transition: 0.2s;
+    border-left: 5px solid skyblue;
 }
