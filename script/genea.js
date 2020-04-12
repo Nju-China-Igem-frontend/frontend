@@ -14,6 +14,7 @@ class Genea{
         this.getFitness=config.getFitness;
 
         this.onGeneration=config.onGeneration;
+        // this.outOfGeneration=config.outOfGeneration;
         // this.done=config.done;
         
     }
@@ -35,7 +36,7 @@ class Genea{
     }
 
     select(){
-        if(this.currentGeneration>=this.generationSize) return {};
+        if(this.currentGeneration>=this.generationSize) return this.outOfGeneration();
         let matches=this.getMatches();
         if(matches.length>0) {
             // console.log(matches);
@@ -61,7 +62,6 @@ class Genea{
     
     getNextGeneration(){
         this.currentGeneration++;
-        if(this.currentGeneration>=this.generationSize) return {};
         let oldPopulations=this.populations;
         let newPopulations=[];
         for(let i=0,len=oldPopulations.length;i<len;++i){
@@ -122,6 +122,8 @@ class Genea{
 
     onGeneration(){}
 
+    outOfGeneration(){}
+
 }
 function getRandomGene(length) {
     let gene='';
@@ -131,8 +133,8 @@ function getRandomGene(length) {
     return gene;
 }
 
-var str="Nju-China-Igem-Frontend";
-const alphabetArr="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.,- ".split('');
+var str="Stay foolish,stay naive";
+const alphabetArr="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ., ".split('');
 const alphabet=(()=>{
     const alphabet={};
     alphabetArr.forEach((ch,i)=>{
@@ -190,7 +192,7 @@ function toChars(gene) {
         gene=gene.substr(6);
         let chIndex=parseInt(ch,2);
         if(chIndex>=alphabetArr.length){
-            cIndex=Math.floor(Math.random()*(alphabetArr.length-1));
+            chIndex=Math.floor(Math.random()*(alphabetArr.length-1));
         }
         str+=alphabetArr[chIndex];
     }
@@ -200,14 +202,14 @@ genea.start();
 function display() {
     var random=document.getElementById("random");
     let history=genea.history;
-    let step=5;
+    let step=20;
     let index=0;
     var timer=setInterval(toTarget,step);
     random.innerHTML=history[index];
     function toTarget() {
         clearInterval(timer);
         index+=1;
-        step+=0.25;
+        step+=0.15;
         random.innerHTML=history[index];
         // console.log(index,history[index]);
         if(index<400&&history[index]!==str) timer=setInterval(toTarget,step);

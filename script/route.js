@@ -3,15 +3,15 @@
  */
 $(document).ready(function(){
     $("#head0").click(function(){
-        $("#home").show();
         for(let i=0;i<total;++i){
-            $("background"+i).hide();
+            $("#background"+i).hide();
         }
+        $("#home").show();
     });
     for(let i=0;i<total;++i){
         $("#link"+i).click(function(){
-            $("#background"+i).show();
             $("#home").hide();
+            $("#background"+i).show();
             for(let j=0;j<total;++j){
                 if(j!=i) $("#background"+j).hide();
             }
