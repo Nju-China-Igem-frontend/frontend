@@ -1,13 +1,13 @@
-var up = ["Home", "Project", "Human Practice", "Model", "Team", "Contacts"];//导航头部
-var down = {
+let up = ["Home", "Project", "Human Practice", "Model", "Team", "Contacts"];//导航头部
+let down = {
     "1": ["Background", "Design", "Experiments", "Improve"],
     "2": ["Human Practice", "Entrepreneurship"],
     "3": ["Overview", "Reception Screening"],
     "4": ["Team", "Attributions"],
     "5": ["Weibo", "E-mail"]
 };//导航内容
-var size = up.length;
-var total = 0;
+let size = up.length;
+let total = 0;
 for (let i = 1; i < size; ++i) {
     total += down[i.toString()].length;
 }//总导航个数
@@ -20,7 +20,7 @@ $(document).ready(
     function () {
         console.log(total);
 
-        var logo = document.createElement("div");
+        let logo = document.createElement("div");
         logo.innerHTML = "<img src='' alt='logo'>";
         logo.id = "logo";
         $("#nav").append(logo);
@@ -31,10 +31,10 @@ $(document).ready(
 
         let index = 0;
         for (let i = 0; i < size; ++i) {
-            var group = document.createElement("div");
+            let group = document.createElement("div");
             group.id = "nav-head" + i;
-            var head = document.createElement("div");
-            var content = document.createElement("div");
+            let head = document.createElement("div");
+            let content = document.createElement("div");
             head.id = "head" + i;
             content.id = "content" + i;
             head.className = "head";

@@ -5,9 +5,10 @@
 }
 
 #route{
-    padding-top: 75px;
+    padding-top: 80px;
     /* margin-top: 75px; */
     height: 1200px;
+    overflow: hidden;
 }
 .background{
     width: 100%;

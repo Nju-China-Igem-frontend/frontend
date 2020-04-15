@@ -7,4 +7,4 @@ require(['jquery'],function($) {
     $(document).ready(function(){
         alert("it is ok");
     })
-})
+});

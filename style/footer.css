@@ -1,0 +1,44 @@
+#footer {
+    width: 100vw;
+    height: 250px;
+    background-color: #6a005f;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+#footer div.contact-us {
+    height: 80%;
+    align-self: center;
+    margin: 0 60px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+div.p {
+    padding-left: 40px;
+    font-size: 30px;
+    font-weight: 600;
+    color: aliceblue;
+    margin: auto 0;
+}
+div.location {
+    color: rgba(155, 155, 155, 1);
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+}
+div.contact-us img {
+    height: 28px;
+    width: 28px;
+}
+
+div.email {
+    color: rgba(155, 155, 155, 1);
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+}
+#footer div.budge {
+    margin: auto auto;
+}
