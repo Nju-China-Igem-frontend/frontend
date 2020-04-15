@@ -73,9 +73,8 @@ a {
 }
 
 .content{
-    position: absolute;
-    margin-top: 45px;
-    width: 16%;
+    position: relative;
+    width: 150%; /* 相对父元素的宽度 */
     background-color: white;
     color: grey;
     border-radius: 10px;
