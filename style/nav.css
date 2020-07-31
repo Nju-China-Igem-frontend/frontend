@@ -5,14 +5,14 @@ body{
 #nav {
     display: grid;
     grid-template-columns: 2fr 7fr;
-    height: 80px;
-    background: -webkit-linear-gradient(to left, #2F80ED, #56CCF2) !important;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #2F80ED, #56CCF2)!important;
-    color: white;
+    height: 70px;
+    /*background: -webkit-linear-gradient(to left, #2F80ED, #56CCF2) !important;  !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to left, #2F80ED, #56CCF2) !important;*/
+    color: dimgrey;
+    background: white;
     font-size: 17px;
     position: fixed;
     width: 100%;
-    /* opacity: 0.8; */
 }
 
 #nav-head {
@@ -23,21 +23,23 @@ body{
 .nav-default{
     display: flex;
     flex-direction: column;
-    padding: 25px 10px 0 10px;
-    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
     align-items: center;
+    justify-content: center;
 }
 .head{
     display: inline;
     text-align: center;
     font-weight: bold;
 }
-.head img {
-    margin: 0;
-    padding: 0;
-    width: 30px;
-    cursor: pointer;
-}                 
+/*.head img {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    width: 30px;*/
+/*    cursor: pointer;*/
+/*}*/
 a {
     display: block;
     cursor: pointer;
@@ -74,11 +76,10 @@ a {
 
 .content{
     position: absolute;
-    margin-top: 45px;
-    width: 16%;
+    top: 70px;
+    width: 12%;
     background-color: white;
     color: grey;
-    border-radius: 10px;
     overflow: hidden;
 }
 
