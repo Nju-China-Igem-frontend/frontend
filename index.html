@@ -20,7 +20,7 @@
                 <img src="assets/logo.jpg" alt="logo">
             </a>
             <ul>
-                <li><a href="#/Home">Home</a></li>
+                <li><a href="#/Home" onclick="">Home</a></li>
                 <li>
                     <p>Project</p>
                     <ul>
@@ -61,5 +61,10 @@
         }).$mount('#app')
     </script>
     <script src="script/team.js"></script>
+    <script>
+        function refresh() {
+            window.history.go(0)
+        }
+    </script>
 </body>
 </html>
