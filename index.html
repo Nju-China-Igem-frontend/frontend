@@ -2,16 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend</title>
-    <link rel="stylesheet" href="./style/nav.css">
-    <link rel="stylesheet" href="./style/main.css">
-    <script src="./lib/jquery.js"></script>
-    <script src="./script/nav.js"></script>
-    <script src="./script/route.js"></script>
+    <title>Title</title>
+    <link rel="stylesheet" href="style/nav.css"/>
+    <link rel="stylesheet" href="style/content.css"/>
+    <!--   引入vue-router用于路由    -->
+    <script src="lib/vue.js"></script>
+    <script src="lib/vue-router.js"></script>
 </head>
 <body>
-    <div id="nav"></div>
-    <div id="route"></div>
+    <div id="app">
+        <header id="nav">
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#/Home">Home</a></li>
+                <li>
+                    <p>Project</p>
+                    <ul>
+                        <li><a href="#/Background">Background</a></li>
+                        <li><a href="#/Design">Design</a></li>
+                        <li><a href="#/Experiments">Experiments</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Modal</p>
+                    <ul>
+                        <li><a href="#/Overview">Overview</a></li>
+                        <li><a href="#/Reception">Reception</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#/Team">Team</a>
+                </li>
+            </ul>
+        </header>
+        <div id="content">
+            <router-view></router-view>
+        </div>
+    </div>
+    <script src="script/Home.js"></script>
+    <script src="script/Design.js"></script>
+    <script src="script/Background.js"></script>
+    <script>
+        const router=new VueRouter({
+            routes: [
+                {path:"/Home",component:Home},
+                {path:"/Background",component:Background},
+                {path:"/Design",component:Design},
+            ]
+        })
+        const app =new Vue({
+            router:router
+        }).$mount('#app')
+    </script>
 </body>
 </html>
