@@ -5,56 +5,42 @@
     <title>Title</title>
     <link rel="stylesheet" href="style/nav.css"/>
     <link rel="stylesheet" href="style/content.css"/>
-    <!--   引入vue-router用于路由    -->
-    <script src="lib/vue.js"></script>
-    <script src="lib/vue-router.js"></script>
 </head>
 <body>
-    <div id="app">
-        <header class="nav">
-            <a href="#" class="logo">
-                <img src="assets/logo.jpg" alt="logo">
-            </a>
-            <ul>
-                <li><a href="#/Home">Home</a></li>
-                <li>
-                    <p>Project</p>
-                    <ul>
-                        <li><a href="#/Background">Background</a></li>
-                        <li><a href="#/Design">Design</a></li>
-                        <li><a href="#/Experiments">Experiments</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <p>Modal</p>
-                    <ul>
-                        <li><a href="#/Overview">Overview</a></li>
-                        <li><a href="#/Reception">Reception</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#/Team">Team</a>
-                </li>
-            </ul>
-        </header>
-        <div id="content">
-            <router-view></router-view>
-        </div>
+    <header class="nav">
+        <a href="#" class="logo">
+            <img src="assets/logo.jpg" alt="logo">
+        </a>
+        <ul>
+            <li><a href="#/Home">Home</a></li>
+            <li>
+                <p>Project</p>
+                <ul>
+                    <li><a href="#/Background">Background</a></li>
+                    <li><a href="#/Design">Design</a></li>
+                    <li><a href="#/Experiments">Experiments</a></li>
+                </ul>
+            </li>
+            <li>
+                <p>Modal</p>
+                <ul>
+                    <li><a href="#/Overview">Overview</a></li>
+                    <li><a href="#/Reception">Reception</a></li>
+                </ul>
+            </li>
+            <li>
+                <p>Human Practice</p>
+                <ul>
+                    <li><a href="hp.html">Human Practice</a></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li>
+                <a href="team.html">Team</a>
+            </li>
+        </ul>
+    </header>
+    <div id="content">
     </div>
-    <script src="script/Home.js"></script>
-    <script src="script/Design.js"></script>
-    <script src="script/Background.js"></script>
-    <script>
-        const router=new VueRouter({
-            routes: [
-                {path:"/Home",component:Home},
-                {path:"/Background",component:Background},
-                {path:"/Design",component:Design},
-            ]
-        })
-        const app =new Vue({
-            router:router
-        }).$mount('#app')
-    </script>
 </body>
 </html>
