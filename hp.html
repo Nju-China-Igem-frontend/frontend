@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style/hp.css">
+    <link rel="stylesheet" href="style/nav.css"/>
 </head>
 <body>
+    <header class="nav">
+        <a href="#" class="logo">
+            <img src="assets/logo.jpg" alt="logo">
+        </a>
+        <ul>
+            <li><a href="#/Home">Home</a></li>
+            <li>
+                <p>Project</p>
+                <ul>
+                    <li><a href="#/Background">Background</a></li>
+                    <li><a href="#/Design">Design</a></li>
+                    <li><a href="#/Experiments">Experiments</a></li>
+                </ul>
+            </li>
+            <li>
+                <p>Modal</p>
+                <ul>
+                    <li><a href="#/Overview">Overview</a></li>
+                    <li><a href="#/Reception">Reception</a></li>
+                </ul>
+            </li>
+            <li>
+                <p>Human Practice</p>
+                <ul>
+                    <li><a href="hp.html">Human Practice</a></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li>
+                <a href="team.html">Team</a>
+            </li>
+        </ul>
+    </header>
     <main>
         <div class="row">
             <!-- 左侧目录 -->
@@ -36,7 +70,6 @@
     const scroll = new SmoothScroll('nav a[href*="#"]', {
         header: "header",
         offset: 80,
-
     })
 </script>
 

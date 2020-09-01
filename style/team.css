@@ -4,6 +4,7 @@ body {
 }
 main {
     background-color: #eafaff;
+    position: relative;
 }
 .content-wrapper {
     display: flex;
