@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/hp.css">
+</head>
+<body>
+    <main>
+        <div class="row">
+            <!-- 左侧目录 -->
+            <div class="navSide">
+                <nav class="nav-content">
+                    <a href="#8">Deadlock</a>
+                    <a href="#9">Memory Management</a>
+                    <a href="#10">Virtual Memory</a>
+                    <a href="#11">Mass-Storage Structure</a>
+                </nav>
+            </div>
+            <!-- 右侧内容 -->
+            <div class="content">
+                <h2 id="8">Chapter 8 Deadlock</h2>
+                <p>In a multiprogramming environment, several threads may compete for a finite number of resources. A thread requests resources; if the resources are not available at that time, the thread enters a waiting state. Sometimes, a waiting thread can never again change state, because the resources it has requested are held by other waiting threads. This situation is called a deadlock. We discussed this issue briefly in Chapter 6 as a form of liveness failure. There, we defined deadlock as a situation in which every process in a set of processes is waiting for an event that can be caused only by another process in the set.</p>
+                <h2 id="9">Chapter 9 Main Memory</h2>
+                <p>In this chapter, we discuss various ways to manage memory. The memory- management algorithms vary from a primitive bare-machine approach to a strategy that uses paging. Each approach has its own advantages and disad- vantages. Selection of a memory-management method for a specific system depends on many factors, especially on the hardware design of the system. As we shall see, most algorithms require hardware support, leading many systems to have closely integrated hardware and operating-system memory management.</p>
+                <h2 id="10">Chapter 10 Virtual Memory</h2>
+                <p>Virtual memory is a technique that allows the execution of processes that are not completely in memory. One major advantage of this scheme is that pro- grams can be larger than physical memory. Further, virtual memory abstracts main memory into an extremely large, uniform array of storage, separating logical memory as viewed by the programmer from physical memory. This technique frees programmers from the concerns of memory-storage limita- tions. Virtual memory also allows processes to share files and libraries, and to implement shared memory.</p>
+                <h2 id="11">Chapter 11 Mass-Storage Structure</h2>
+                <p>In this chapter, we discuss how mass storage—the nonvolatile storage sys- tem of a computer—is structured. The main mass-storage system in modern computers is secondary storage, which is usually provided by hard disk drives (HDD) and nonvolatile memory (NVM) devices. Some systems also have slower, larger, tertiary storage, generally consisting of magnetic tape, optical disks, or even cloud storage.</p>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="lib/smoothScroll/smooth-scroll.polyfills.js"></script>
+<script>
+    const scroll = new SmoothScroll('nav a[href*="#"]', {
+        header: "header",
+        offset: 80,
+
+    })
+</script>
+
+</html>
