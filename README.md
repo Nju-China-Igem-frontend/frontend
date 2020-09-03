@@ -1,4 +1,9 @@
 # iGEM前端网页
+## Medal Criteria
+- Bronze
+    - Attributions
+    - Project Description
+    - Contribution
 ## 引用CSS/JS 格式
 ```html
 <link rel="stylesheet" type="text/css" href="https://2020.igem.org/wiki/index.php?title=Team:NJU-China/CSS&action=raw&ctype=text/css" />

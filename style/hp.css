@@ -8,7 +8,7 @@
     flex-direction: row;
     width: 80%;
     /*height: 2000px;*/
-    margin: 200px auto;
+    margin: 280px auto;
 }
 .nav-content {
     margin-left: 80px;
@@ -16,7 +16,7 @@
     height: 400px;
     box-shadow: 1px 1px 10px #8D8D8D;
     position: sticky !important;
-    top: 100px;
+    top: 180px;
 
     display: flex;
     flex-direction: column;
@@ -29,14 +29,14 @@
 }
 
 /* 右侧内容 */
-.content {
+.text-content {
     margin: 0 120px;
 }
 
-.content h2 {
+.text-content h2 {
     margin: 20px 0;
 }
 
-.content p {
+.text-content p {
     font-size: 20px;
 }

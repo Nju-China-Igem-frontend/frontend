@@ -47,6 +47,7 @@
 
 .nav ul li{
     text-align: center;
+    min-width: 180px;
 }
 
 .nav ul li ul{
@@ -55,10 +56,6 @@
 
 .nav ul li ul li{
     padding: 12px;
-}
-
-.nav ul li{
-    min-width: 180px;
 }
 
 .nav ul li:hover ul{

@@ -12,7 +12,7 @@
             <img src="assets/logo.jpg" alt="logo">
         </a>
         <ul>
-            <li><a href="#/Home">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li>
                 <p>Project</p>
                 <ul>
@@ -36,11 +36,15 @@
                 </ul>
             </li>
             <li>
-                <a href="team.html">Team</a>
+                <p>Team</p>
+                <ul>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="attribution.html">Attribution</a></li>
+                </ul>
             </li>
         </ul>
     </header>
-    <main>
+    <main class="content">
         <div class="row">
             <!-- 左侧目录 -->
             <div class="navSide">
@@ -52,7 +56,7 @@
                 </nav>
             </div>
             <!-- 右侧内容 -->
-            <div class="content">
+            <div class="text-content">
                 <h2 id="8">Chapter 8 Deadlock</h2>
                 <p>In a multiprogramming environment, several threads may compete for a finite number of resources. A thread requests resources; if the resources are not available at that time, the thread enters a waiting state. Sometimes, a waiting thread can never again change state, because the resources it has requested are held by other waiting threads. This situation is called a deadlock. We discussed this issue briefly in Chapter 6 as a form of liveness failure. There, we defined deadlock as a situation in which every process in a set of processes is waiting for an event that can be caused only by another process in the set.</p>
                 <h2 id="9">Chapter 9 Main Memory</h2>
