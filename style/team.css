@@ -7,6 +7,7 @@ main {
     position: relative;
 }
 .content-wrapper {
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
