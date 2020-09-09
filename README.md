@@ -18,7 +18,7 @@
 ### 自己写的
 - 主页（HOME）
     - /CSS
-    
+    - /nav.css
 - TEAM
     - 
 ### 外部第三方库
@@ -26,3 +26,14 @@
     - /glide.core.min.css
     - /glide.theme.min.css
     - /glide.min.js
+- scrollReveal 库
+    - /scrollreveal.min.js
+- smoothScroll 库
+    - /smoothscroll.polyfills.js
+### 图片资源
+- 一张用于wiki测试用的图片
+https://2020.igem.org/wiki/images/f/f4/T--NJU-China--wiki_test.jpg
+### pdf资源
+https://2020.igem.org/wiki/images/c/cc/T--NJU-China--ChenXi_LunLiPiJian.pdf
+https://2020.igem.org/wiki/images/2/28/T--NJU-China--pic.pdf
+https://2020.igem.org/wiki/images/2/28/T--NJU-China--pic.pdf
