@@ -76,6 +76,43 @@
         header: "header",
         offset: 80,
     })
+    const nav=document.getElementsByClassName("nav-content")[0].children
+    const content=document.getElementsByClassName("text-content")[0].children
+    const tagName="H2";
+    function addStyle(final){
+        nav[final].style.borderLeft="3px solid pink";
+        nav[final].style.background="#e3e3e3";
+    }
+    function deleteStyle(index){
+        nav[index].style.borderLeft="none";
+        nav[index].style.background="white";
+    }
+    window.onscroll=function() {
+        const screenTop=window.pageYOffset;
+        let index=0;
+        let final=0;
+        let minDistance=Math.abs(content[0].offsetTop-screenTop-120);
+        for(let i=0;i<content.length;i++){
+            if(content[i].tagName===tagName){
+                let currentDistance=Math.abs(content[i].offsetTop-screenTop-120)
+                if(currentDistance<minDistance){
+                    final=index;
+                    minDistance=currentDistance;
+                }
+                index++;
+            }
+        }
+        index=0;
+        for(let i=0;i<content.length;i++){
+            if(content[i].tagName===tagName){
+                deleteStyle(index);
+                index++;
+            }
+        }
+        addStyle(final);
+    }
+
 </script>
 
 </html>
+
